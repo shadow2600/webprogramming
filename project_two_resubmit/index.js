@@ -32,7 +32,7 @@ app.post('/test_two', (req, res) => {
     return res.json(
 
         {
-             "message": "I love to eat " + aFruit + " with" + aCake 
+             "message": "i love to eat " + aFruit + " with " + aCake 
         }
 
     );
@@ -69,7 +69,7 @@ app.post('/test_four', (req, res) => {
     const{ fruit, cake} = req.body;
 
     return res.json({
-        message: "I am getting really sick of eating" + fruit + "after filling up on " + cake
+        message: "i am getting really sick of eating " + fruit + " after filling up on " + cake
     });
 });
 app.put('/test_five/write', (req,res) => {
@@ -93,7 +93,7 @@ app.put('/test_five/write', (req,res) => {
     }
 
     return res.json({
-        message : 'you sent' + afruit + 'and' + acake
+        message : 'you sent' + aFruit + 'and' + aCake
     });
 });
 
