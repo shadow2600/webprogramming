@@ -4,7 +4,7 @@ const app = express();
 
 const PORT = 3000;
 
-const FakeDatabase = require('./Database.js');
+const FakeDatabase = require('./db.js');
 
 const Database = new FakeDatabase();
 
@@ -12,9 +12,7 @@ const jsonMiddleware = express.json();
 
 app.use(jsonMiddleware);
 
-const Authorizing = require('body-authorizing');
-
-app.use(Authorizing.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 
 app.get('/test_one', (req, res) => {
 
@@ -46,6 +44,7 @@ app.get('/test_three/:fruit/:cake', (req, res) => {
 
     const project = req.headers.authorization.replace('Bearer', '');
 
+
     if (Authorize == project) {
         return res.json({
             message:
@@ -63,6 +62,7 @@ app.get('/test_three/:fruit/:cake', (req, res) => {
             message: 'unauthorized'
         })
     }
+});
 
 app.post('/test_four', (req, res) => {
 
@@ -112,9 +112,4 @@ app.get('/Database/write', (req, res) => {
     res.json(Database);
 });
 
-const onListen = () => {
-    console.log("I am listening");
-}
-
-app.listen(PORT, () => console.log('listening on port' +PORT));
-})
+app.listen(PORT, () => console.log('listening on port' + PORT));
