@@ -75,6 +75,46 @@ app.post('/test_four', (req, res) => {
 app.put('/test_five/write', (req,res) => {
 
     const { fruit, cake } = req.body;
-})
 
+    const aFruit = Database.read(fruit);
+    if(!aFruit) {
+        Database.create(fruit, 1);
+    
+    } else {
+        Database.update(fruit, aFruit+1);
+    }
+
+    const aCake = Database.read(cake);
+    if(!aCake) {
+        Database.create(cake, 1);
+
+    } else {
+        Database.update(cake, aCake+1);
+    }
+
+    return res.json({
+        message : 'you sent' + afruit + 'and' + acake
+    });
+});
+
+app.get('/test_five/read', (req, res) => {
+    return res.json(JSON.parse(Database.dump()));
+    res.json(Database.data);
+});
+
+app.get('/Database/read', (req, res) => {
+    res.json(Database.data);
+});
+
+app.get('/Database/write', (req, res) => {
+    console.log(req.query);
+    Database.create(req.query.key, req.query.value);
+    res.json(Database);
+});
+
+const onListen = () => {
+    console.log("I am listening");
+}
+
+app.listen(PORT, () => console.log('listening on port' +PORT));
 })
