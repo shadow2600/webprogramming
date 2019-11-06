@@ -38,7 +38,7 @@ app.post('/test_two', (req, res) => {
     );
 });
 
-app.get('/test_three/:fruit,/:cake', (req, res) => {
+app.get('/test_three/:fruit/:cake', (req, res) => {
 
     const Authorize = 'projecttwo';
 
@@ -53,7 +53,7 @@ app.get('/test_three/:fruit,/:cake', (req, res) => {
     }
     else if (Authorize !== project) {
         return res.json({
-            message: "you sent " + req.params.fruit + " and " + req.params.cake + " but I only eat " +req.params.cake + "!"
+            message: "you sent " + req.params.fruit + " and " + req.params.cake + ", but I only eat " +req.params.cake + "!"
         })
     }
 });
@@ -87,7 +87,7 @@ app.put('/test_five/write', (req,res) => {
     }
 
     return res.json({
-        message : 'you sent fruit and chocolate'
+        message : 'you sent ' + fruit + ' and ' + cake
     });
 });
 
