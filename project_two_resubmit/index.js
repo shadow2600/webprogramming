@@ -93,7 +93,7 @@ app.put('/test_five/write', (req,res) => {
     }
 
     return res.json({
-        message : 'you sent' + aFruit + 'and' + aCake
+        message : 'you sent ${fruit} and ${cake}'
     });
 });
 
