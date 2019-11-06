@@ -48,18 +48,12 @@ app.get('/test_three/:fruit/:cake', (req, res) => {
     if (Authorize == project) {
         return res.json({
             message:
-            "you sent"
-            + req.params.fruit +
-            "and"
-            + req.params.cake +
-            "but I only eat"
-            + req.params.cake +
-            "!"
+            'unauthorized'
         })
     }
     else if (Authorize !== project) {
         return res.json({
-            message: "you sent" + req.params.fruit + "and" + req.params.cake + "but I only eat" +req.params.cake + "!"
+            message: " you sent " + req.params.fruit + " and " + req.params.cake + " but I only eat " +req.params.cake + "!"
         })
     }
 });
