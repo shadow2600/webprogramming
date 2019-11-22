@@ -13,11 +13,11 @@
 
 # misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-env.js
+.key.local
+.key.development.local
+.key.test.local
+.key.production.local
+key.js
 README2.md
 
 npm-debug.log*
