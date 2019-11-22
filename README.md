@@ -1,19 +1,11 @@
-## next class: 10/15
+# Project 5 Completed. 
 
-PROJECT ONE due at midnight!
+### Run:
+` npm install `
 
-how to test your grade:
+to install the packages you will need to properly test the program. 
 
-`curl -H 'Content-Type: application/json' -d '{ "githubUserName": "$YOUR_GITHUB_USERNAME_GOES_HERE" }' http://157.245.10.53:5000/test/project_one`
-
-Please keep in mind, the testing tool will look for your fork of `github.com/lehmanclass/webprogramming` and look for your `index.html` file in: 
-
-`webprogramming/project_one/index.html`
-
-If your project is not in your fork of `webprogramming` or following that path structure, the test will not work.
-
-REMEMBER: You'll get a chance to go over your project with me on tuesday 10/15, and ask any questions you have.
-
-`NOTE`: the tests for part four (the form) might have a bug in them. If your project is failing testFour and you think there is an error, email me so I can fix it.
- 
-
+# EXTRA CREDITS:
+## Includes Additional CSS
+## Includes a github repo pull request history
+## Solves a real person's problem (Just hear me out :D): Say Giphy webpage front end is broken, my app goes to act as a backup that will be able to still make use of their server and provide a user a limited amount of gifs until Giphy can get their act together. The world without memes is dead and full sorrow! 
