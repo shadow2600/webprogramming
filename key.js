@@ -1,1 +1,0 @@
-module.exports = API_KEY = 'ylhi7DP7528GsHrQkv0jXbawQmdVU0a4';
