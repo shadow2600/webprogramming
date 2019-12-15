@@ -24,3 +24,12 @@ const db = new pg.Client({
 });
 
 db.connect();
+
+function check(form) {
+	if(form.john.value == "john" && form.doe.value == "doe") {
+		window.open('AnimeZone.html')
+	}
+	else {
+		alert("Error Password or Username is incorrect")
+	}
+}
