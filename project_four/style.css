@@ -7,10 +7,18 @@
     box-sizing: border-box;
 }
 
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+  @-ms-viewport {
+    width: device-width ;
+  }
+
 .front{
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(anime.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/anime.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -178,4 +186,16 @@ nav{
     border: double 5px rgba(255,255,255,0.7);
     background: rgba(255,255,255,0.7);
     box-shadow: 0px 0px 40px 40px rgba(55,54,51, 1);
+}
+
+#form-messages {
+    background-color: rgb(255,232,232);
+    border: 1px solid red;
+    color: red; 
+    display: none;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px 25px;
+    max-width: 250px;
 }

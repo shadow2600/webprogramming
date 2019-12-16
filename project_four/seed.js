@@ -27,7 +27,7 @@ db.connect();
 
 function check(form) {
 	if(form.john.value == "john" && form.doe.value == "doe") {
-		window.open('AnimeZone.html')
+		location.href='AnimeZone.html';
 	}
 	else {
 		alert("Error Password or Username is incorrect")
